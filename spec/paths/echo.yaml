@@ -1,1 +1,4 @@
-post: null
+post:
+  responses:
+    '200':
+      description: OK

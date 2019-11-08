@@ -7,7 +7,7 @@ get:
     You can search by area name, area code or filter using both.
   responses:
     '200':
-      description: Successful operation
+      description: OK
       content:
         application/json:
           schema:
