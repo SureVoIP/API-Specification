@@ -53,7 +53,7 @@ servers:
   - url: 'https://api.surevoip.co.uk'
     description: Production SureVoIP API (live data)
   - url: 'https://sandbox.surevoip.co.uk'
-    description: Sandbox SureVoIP API (data 24 hours old)
+    description: Sandbox SureVoIP API (data is 24 hours behind production)
 security:
   - BasicAuth: []
 tags: []
