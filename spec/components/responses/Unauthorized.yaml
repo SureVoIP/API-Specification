@@ -2,4 +2,4 @@ description: Unauthorized
 content:
   application/json:
     schema:
-      $ref: '#/components/schemas/Errors'
+      $ref: '#/components/schemas/GeneralError'
