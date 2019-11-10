@@ -1,0 +1,32 @@
+type: object
+properties:
+  address:
+    type: string
+  balance:
+    type: integer
+  city:
+    type: string
+  company_name:
+    type: string
+  company_website:
+    type: string
+  country:
+    type: string
+  creditlimit:
+    type: string
+  email:
+    type: string
+  fax:
+    type: string
+  firstname:
+    type: string
+  lastname:
+    type: string
+  phone:
+    type: string
+  postcode:
+    type: string
+  state:
+    type: string
+  username:
+    type: integer

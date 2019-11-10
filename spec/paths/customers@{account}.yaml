@@ -1,0 +1,17 @@
+get:
+  summary: Represents a customer
+  operationId: getCustomer
+  parameters:
+    - in: path
+      name: account
+      schema:
+        type: integer
+      required: true
+      description: Account ID of customer
+  responses:
+    '200':
+      description: Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Customer'
