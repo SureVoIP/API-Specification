@@ -1,0 +1,6 @@
+type: object
+properties:
+  Announcement:
+    type: string
+  Location:
+    type: string
