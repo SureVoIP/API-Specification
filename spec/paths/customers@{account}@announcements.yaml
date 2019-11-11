@@ -1,15 +1,10 @@
 get:
-  summary: Represents a announcement audio file
+  summary: List of announcement audio files
   parameters:
-    - in: path
-      name: account
-      schema:
-        type: integer
-      required: true
-      description: Account ID of customer
+    - $ref: '#/components/parameters/Account'
   responses:
     '200':
-      description: Found
+      description: OK
       content:
         application/json:
           schema:
@@ -19,4 +14,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/GeneralError'
+            $ref: '#/components/schemas/Message'

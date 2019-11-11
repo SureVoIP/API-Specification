@@ -1,6 +1,28 @@
 type: object
 properties:
-  Announcement:
-    type: string
-  Location:
-    type: string
+  announcement:
+    type: object
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      size:
+        type: integer
+      src_ip_address:
+        type: string
+      file_internal:
+        type: string
+      filename:
+        type: string
+      creation_date:
+        type: string
+      url:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+          download:
+            type: string

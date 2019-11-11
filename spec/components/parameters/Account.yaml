@@ -1,0 +1,6 @@
+in: path
+name: account
+schema:
+  type: integer
+required: true
+description: Account ID of customer
