@@ -1,4 +1,5 @@
 get:
+  summary: List Hosted VoIP domains
   responses:
     '200':
       description: OK

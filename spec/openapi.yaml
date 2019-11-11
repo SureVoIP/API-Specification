@@ -56,7 +56,17 @@ servers:
     description: Sandbox SureVoIP API (data is 24 hours behind production)
 security:
   - BasicAuth: []
-tags: []
+tags:
+  - name: billing
+  - name: calls
+  - name: customers
+  - name: faxes
+  - name: hosted
+  - name: mobile
+  - name: numbers
+  - name: partners
+  - name: sms
+  - name: support
 externalDocs:
   description: SureVoIP API Wiki
   url: 'https://www.surevoip.co.uk/support/wiki/api_documentation'

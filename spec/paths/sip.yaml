@@ -1,4 +1,5 @@
 get:
+  summary: List all SIP accounts
   responses:
     '200':
       description: OK

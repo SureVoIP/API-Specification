@@ -1,4 +1,10 @@
 get:
+  summary: List charges
   responses:
     '200':
       description: OK
+post:
+  summary: Create charges for invoices
+  responses:
+    '201':
+      description: 'Created,'

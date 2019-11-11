@@ -1,0 +1,94 @@
+type: object
+properties:
+  to:
+    type: string
+    description: 'The b leg of the call, i.e. the person you are calling'
+    example: 442035159995
+  from:
+    type: string
+    description: >-
+      The person making the call, i.e the a leg. This person must answer in
+      order for the b leg to be rung
+    example: 442035159999
+  caller_id:
+    type: string
+    description: The caller ID to show the b leg (to).
+    example: 01224900123
+  announcement_at:
+    type: string
+    description: >
+      is in seconds. Just take 120 secs away from the hangup_at time for a
+      announcement to be played 2 mins before the end of the call. If provided
+      announcement_id is required
+    example: 180
+  announcement_id:
+    type: string
+    description: >
+      is the announcement id (from
+      https://api.surevoip.co.uk/customers/{customer}/announcements/{announcement_id})
+      to play for example “your call is about to end in 2 mins”. We only allow a
+      wav file, but we may allow "words", which will use SureVoIP provided text
+      to speech. If provided announcement_at is required
+    example: hgCRVfWB4hGRSEAkICyA
+  hangup_at:
+    type: string
+    description: >
+      length in seconds from when the call is *answered* to when the system
+      hangs up. If "hangup_announcement_id" is present, this will be played at
+      hangup
+    example: 300
+  hangup_announcement_id:
+    type: string
+    description: >
+      the id of a thank you announcement or similar. You can manage these as you
+      would with any RESTful resource at
+      https://api.surevoip.co.uk/announcements and
+      https://api.surevoip.co.uk/customers/{customer}/announcements/{announcement_id}.
+      It will be played at the end of the call at hangup. If provided hangup_at
+      is required.
+    example: RVfWB4hGRSEAkIXYCyA
+  options:
+    type: object
+    properties:
+      a_leg_only:
+        type: integer
+        description: 'Do not ring the "to" number, only the from and show "caller_id"'
+        example: 1
+      a_leg_caller_id:
+        type: string
+        description: Change the caller ID shown to the a leg (from)
+        example: 01224900123
+      connect_key:
+        type: integer
+        description: >-
+          The phone keypad number to press in order to place the call to the b
+          leg, i.e. press to confirm
+        example: 1
+      cancel_key:
+        type: integer
+        description: >-
+          The phone keypad number to press to hangup the call and not place the
+          second leg of the call
+        example: 2
+      play_audio:
+        type: array
+        items:
+          type: object
+          properties:
+            announcement_id:
+              type: string
+              example: zgL4QmsB6hGmv5YnsW_4lQ
+              description: >
+                Id of announcement audio file which will play to the a leg of
+                the call, i.e. the person that must answer the call first. This
+                plays one or more audio files you have uploaded. The use case
+                being you want to play audio to let the a leg of the call know
+                what the call is about. Imagine a call center agent needs to
+                know that they are calling a customer. These audio files may
+                play a customer account number to the agent for example. 
+
+                Have lots of audio files in this array to build up a message
+required:
+  - to
+  - from
+  - caller_id

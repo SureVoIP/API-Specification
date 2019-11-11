@@ -1,5 +1,7 @@
 get:
   summary: List global announcements
+  tags:
+    - calls
   responses:
     '200':
       description: Return Status OK and/or resource list
@@ -12,6 +14,8 @@ get:
             $ref: '#/components/schemas/Root'
 post:
   summary: Add a new announcement audio file
+  tags:
+    - calls
   requestBody:
     description: >-
       Upload a wav file to be used in other parts of the API - 10Mb limit,
@@ -39,11 +43,15 @@ post:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/PostPutErrors'
+            $ref: '#/components/schemas/DataErrors'
     '403':
       description: >-
         Sorry, you have reached your max quota of 10 announcement files. Please
         delete some.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Message'
     '500':
       description: Problem saving file
       content:

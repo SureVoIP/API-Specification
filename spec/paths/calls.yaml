@@ -1,4 +1,76 @@
 get:
+  summary: Validate a phone number by calling it once
+  tags:
+    - calls
+  parameters:
+    - in: query
+      name: validate
+      schema:
+        type: integer
+      description: >-
+        Validate a phone number by calling it for one ring. Note; not 100% proof
+        the number is in service.
+      example: 441224900123
   responses:
     '200':
       description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Root'
+    '400':
+      description: Bad query data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/DataErrors'
+    '404':
+      description: Only partners or admins can list all live calls.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Message'
+post:
+  summary: Create phone calls with or without announcements and scheduled hangups
+  tags:
+    - calls
+  requestBody:
+    description: >-
+      Create a phone call and play announcement audio to the "from" party (a
+      leg)
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/CreateCall'
+  responses:
+    '202':
+      description: Call creation request accepted.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              Call:
+                type: string
+              Location:
+                type: string
+      headers:
+        Location:
+          description: URL of created call to monitor
+          schema:
+            type: string
+    '400':
+      description: Bad data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/DataErrors'
+    '403':
+      description: Only customer accounts can create calls.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Message'
+    '500':
+      description: Issue with API interface to core platform.
