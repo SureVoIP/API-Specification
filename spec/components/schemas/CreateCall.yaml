@@ -62,13 +62,13 @@ properties:
         type: integer
         description: >-
           The phone keypad number to press in order to place the call to the b
-          leg, i.e. press to confirm
+          leg, i.e. press to confirm. Default 1
         example: 1
       cancel_key:
         type: integer
         description: >-
           The phone keypad number to press to hangup the call and not place the
-          second leg of the call
+          second leg of the call. Default 2
         example: 2
       play_audio:
         type: array
