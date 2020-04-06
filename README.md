@@ -38,3 +38,10 @@ Validates the spec.
 
 #### `npm run gh-pages`
 Deploys docs to GitHub Pages. You don't need to run it manually if you have Travis CI configured.
+
+#### Our links 
+ * https://swagger.io/docs/specification/describing-parameters/
+ * https://livebook.manning.com/book/the-design-of-everyday-apis/chapter-4/58
+ * https://www.surevoip.co.uk/support/wiki/api_documentation
+ * http://localhost:8081/swagger-editor/
+ * http://localhost:4000/
