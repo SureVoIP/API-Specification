@@ -1,0 +1,60 @@
+get:
+  summary: List global announcements
+  tags:
+    - announcements
+  responses:
+    '200':
+      description: Return Status OK and/or resource list
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Root.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/Root.yaml
+post:
+  summary: Add a new announcement audio file
+  tags:
+    - announcements
+  requestBody:
+    description: >-
+      Upload a wav file to be used in other parts of the API - 10Mb limit,
+      ending in .wav
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            file:
+              type: string
+              format: audio/x-wav
+            description:
+              type: string
+    required: true
+  responses:
+    '201':
+      description: File created on filesystem.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Announcement.yaml
+    '400':
+      description: Bad data
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/DataErrors.yaml
+    '403':
+      description: >-
+        Sorry, you have reached your max quota of 10 announcement files. Please
+        delete some.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Message.yaml
+    '500':
+      description: Problem saving file
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Message.yaml

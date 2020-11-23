@@ -1,5 +1,0 @@
-get:
-  summary: List contacts
-  responses:
-    '200':
-      description: OK

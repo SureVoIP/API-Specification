@@ -1,0 +1,7 @@
+get:
+  summary: List areacodes
+  tags:
+    - areacodes  
+  responses:
+    '200':
+      description: OK

@@ -1,5 +1,0 @@
-get:
-  summary: List ported numbers
-  responses:
-    '200':
-      description: OK

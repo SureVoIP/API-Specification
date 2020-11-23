@@ -1,5 +1,0 @@
-post:
-  summary: Return your POSTed data for testing
-  responses:
-    '200':
-      description: OK

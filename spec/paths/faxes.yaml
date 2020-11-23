@@ -1,5 +1,0 @@
-get:
-  summary: List global ongoing faxes
-  responses:
-    '200':
-      description: OK

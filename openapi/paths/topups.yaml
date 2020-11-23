@@ -1,0 +1,7 @@
+get:
+  summary: List all account credit topups
+  tags:
+    - topups  
+  responses:
+    '200':
+      description: OK

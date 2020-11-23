@@ -1,0 +1,7 @@
+get:
+  summary: List all SIP accounts
+  tags:
+    - sip  
+  responses:
+    '200':
+      description: OK

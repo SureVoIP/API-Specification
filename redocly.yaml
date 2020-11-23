@@ -1,8 +1,0 @@
-
-apiTitle: The SureVoIP RESTful hypermedia API
-splitSpec: true
-codeSamples: true
-swaggerUI: true
-travis: true
-repo: SureVoIP/API-Specification
-oasVersion: 3.0.0

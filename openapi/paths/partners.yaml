@@ -1,0 +1,7 @@
+get:
+  summary: List SureVoIP Partner accounts
+  tags:
+    - partners  
+  responses:
+    '200':
+      description: OK

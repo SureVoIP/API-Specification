@@ -1,0 +1,8 @@
+get:
+  summary: List all Service Status messages
+  tags:
+    - support  
+  security: []
+  responses:
+    '200':
+      description: OK

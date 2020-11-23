@@ -1,6 +1,0 @@
-get:
-  summary: Return the IP address from where your API request originated
-  security: []
-  responses:
-    '200':
-      description: OK

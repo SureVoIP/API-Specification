@@ -1,0 +1,7 @@
+get:
+  summary: List ported numbers
+  tags:
+    - porting  
+  responses:
+    '200':
+      description: OK

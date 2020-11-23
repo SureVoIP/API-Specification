@@ -1,0 +1,8 @@
+get:
+  summary: Return the IP address from where your API request originated
+  tags:
+    - support  
+  security: []
+  responses:
+    '200':
+      description: OK

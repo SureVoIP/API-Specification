@@ -1,0 +1,25 @@
+type: oauth2
+description: OpenID Certified OAuth 2.0 Server and OpenID Connect Provider 
+flows:
+  authorizationCode:
+    authorizationUrl: https://authz.surevoip.co.uk/oauth2/auth
+    tokenUrl: https://authz.surevoip.co.uk/oauth2/token
+    refreshUrl: https://authz.surevoip.co.uk/oauth2/token
+    scopes:
+      offline_access: Include this scope if you wish to receive a refresh token
+      offline: Include this scope if you wish to receive a refresh token
+      openid: Include this scope if you wish to perform an OpenID Connect request
+  clientCredentials:
+    tokenUrl: https://authz.surevoip.co.uk/oauth2/token
+    scopes:
+      offline_access: Include this scope if you wish to receive a refresh token
+      offline: Include this scope if you wish to receive a refresh token
+      openid: Include this scope if you wish to perform an OpenID Connect request  
+  implicit:
+    authorizationUrl: https://authz.surevoip.co.uk/oauth2/auth  
+    refreshUrl: https://authz.surevoip.co.uk/oauth2/token
+    scopes:
+      offline_access: Include this scope if you wish to receive a refresh token
+      offline: Include this scope if you wish to receive a refresh token
+      openid:  Include this scope if you wish to perform an OpenID Connect request  
+  

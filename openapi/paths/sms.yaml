@@ -1,0 +1,7 @@
+get:
+  summary: List SMS
+  tags:
+    - sms  
+  responses:
+    '200':
+      description: OK

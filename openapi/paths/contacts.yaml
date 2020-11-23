@@ -1,0 +1,7 @@
+get:
+  summary: List contacts
+  tags:
+    - contacts  
+  responses:
+    '200':
+      description: OK

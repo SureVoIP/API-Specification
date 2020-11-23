@@ -1,0 +1,19 @@
+get:
+  summary: List of announcement audio files
+  tags:
+    - announcements  
+  parameters:
+    - $ref: ../components/parameters/Account.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Announcements.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Message.yaml

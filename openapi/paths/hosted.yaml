@@ -1,0 +1,7 @@
+get:
+  summary: List Hosted VoIP domains
+  tags:
+    - hosted  
+  responses:
+    '200':
+      description: OK

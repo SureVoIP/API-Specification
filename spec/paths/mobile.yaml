@@ -1,5 +1,0 @@
-get:
-  summary: List mobile accounts
-  responses:
-    '200':
-      description: OK

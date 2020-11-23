@@ -1,0 +1,35 @@
+get:
+  summary: List global resources
+  tags:
+    -  global 
+  parameters:
+    - in: query
+      name: hypermedia
+      schema:
+        type: string
+        enum:
+          - 'yes'
+          - 'no'
+        default: 'yes'
+      description: Disable Hypermedia
+    - in: query
+      name: content-type
+      schema:
+        type: string
+        enum:
+          - 'application/json'
+          - 'text/html'
+          - 'text/xml'
+          - 'application/xml'
+        default: 'application/json'
+      description: Content Type
+  responses:
+    '200':
+      description: Return Status OK and/or resource list
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Root.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/Root.yaml

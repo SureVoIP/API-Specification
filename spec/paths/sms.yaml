@@ -1,5 +1,0 @@
-get:
-  summary: List SMS
-  responses:
-    '200':
-      description: OK

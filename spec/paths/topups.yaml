@@ -1,5 +1,0 @@
-get:
-  summary: List all account credit topups
-  responses:
-    '200':
-      description: OK

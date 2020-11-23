@@ -1,6 +1,0 @@
-get:
-  summary: List available SureVoIP Ofcom number allocations for purchase
-  security: []
-  responses:
-    '200':
-      description: OK

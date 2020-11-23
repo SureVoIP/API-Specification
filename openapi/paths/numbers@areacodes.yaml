@@ -1,0 +1,14 @@
+get:
+  security: []
+  summary: Search available numbers by areacode
+  tags:
+    - areacodes  
+  description: |
+    You can search by area name, area code or filter using both.
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Areacodes.yaml

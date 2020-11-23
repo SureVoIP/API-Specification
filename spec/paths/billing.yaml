@@ -1,5 +1,0 @@
-get:
-  summary: List global billing detail
-  responses:
-    '200':
-      description: OK

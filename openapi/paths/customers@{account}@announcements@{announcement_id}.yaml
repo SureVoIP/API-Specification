@@ -1,0 +1,40 @@
+get:
+  summary: Represents an announcement audio file
+  tags:
+    - announcements  
+  parameters:
+    - $ref: ../components/parameters/Account.yaml
+    - $ref: ../components/parameters/Announcement.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Announcement.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GeneralError.yaml
+delete:
+  summary: Delete an announcement audio file
+  tags:
+    - announcements  
+  parameters:
+    - $ref: ../components/parameters/Account.yaml
+    - $ref: ../components/parameters/Announcement.yaml
+  responses:
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Message.yaml
+    '410':
+      description: Gone
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Message.yaml

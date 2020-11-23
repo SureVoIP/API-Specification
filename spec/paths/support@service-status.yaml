@@ -1,6 +1,0 @@
-get:
-  summary: List all Service Status messages
-  security: []
-  responses:
-    '200':
-      description: OK

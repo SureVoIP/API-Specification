@@ -1,0 +1,7 @@
+post:
+  summary: Return your POSTed data for testing
+  tags:
+    - echo  
+  responses:
+    '200':
+      description: OK

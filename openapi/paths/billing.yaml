@@ -1,0 +1,7 @@
+get:
+  summary: List global billing detail
+  tags:
+    - billing  
+  responses:
+    '200':
+      description: OK

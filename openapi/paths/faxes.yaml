@@ -1,0 +1,7 @@
+get:
+  summary: List global ongoing faxes
+  tags:
+    - faxes  
+  responses:
+    '200':
+      description: OK

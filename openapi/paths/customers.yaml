@@ -1,0 +1,26 @@
+get:
+  summary: List all customers or find your own account
+  tags:
+    - customers  
+  responses:
+    '302':
+      description: Found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              location:
+                type: string
+      links:
+        GetCustomer:
+          description: |
+            The 'location' URL contains the customer account
+          operationId: getCustomer
+          parameters:
+            account: $response.body#/location
+      headers:
+        Location:
+          description: URL of customer account
+          schema:
+            type: string

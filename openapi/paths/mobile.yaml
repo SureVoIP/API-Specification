@@ -1,0 +1,7 @@
+get:
+  summary: List mobile accounts
+  tags:
+    - mobile  
+  responses:
+    '200':
+      description: OK
